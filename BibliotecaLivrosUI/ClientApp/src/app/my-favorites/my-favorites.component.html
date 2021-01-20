@@ -1,0 +1,24 @@
+
+  <h1>Meus favoritos</h1>
+  <p>Lista com os livros guardados:</p>
+
+  <div class="card">
+
+    <div class="container">
+      <table class="table">
+        <tr *ngFor="let book of books">
+          <td>
+            <img [src]="book.imageLinks" width="200" height="250">
+          </td>
+          <td>
+            <h2>{{ book.title }}</h2>
+            <h4>{{ book.subtitle }}</h4>
+            <h6><ul style="list-style: none;"><li>{{ book.description }}</li></ul></h6>
+          </td>
+          <td><button class="btn btn-primary" (click)="excluir(book.id)"> Excluir</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+

@@ -1,0 +1,27 @@
+
+  <h1>Pesquisa</h1>
+  <p>Informe o nome do livro para busca:</p>
+  <div class="pesquisa">
+    <input class="text-input" size="100" type="text" #pesquisa placeholder="Digite a palavra chave aqui..." autofocus />
+    <button class="btn btn-primary" (click)="pesquisar(input)"> Pesquisar</button>
+  </div>
+  <div class="card">
+    <!-- main app container -->
+    <div class="container">
+      <table class="table">
+        {{ buscaLivros }}
+        <tr *ngFor="let book of books">
+          <td>
+            <img [src]="book.imageLinks" width="200" height="250">
+          </td>
+          <td>
+            <h2>{{ book.title }}</h2>
+            <h4>{{ book.subtitle }}</h4>
+            <ul style="list-style: none;"><li>{{ book.description }}</li></ul>
+          </td>
+          <td><button class="btn btn-primary" (click)="favoritos(book)"> Favoritos</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
