@@ -1,8 +1,6 @@
 # BibliotecaLivros
 
-Requisitos para Debugar a aplicação: Visual Studio instalado.
-
-Rodando o projeto
+Rodando o projeto via Visual Studio
 
 1 - instale o node.js versão 14.15.4 que se encontra disponível no seguinte caminho:
 https://nodejs.org/en/download/
